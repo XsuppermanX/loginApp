@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+      <!-- <ion-button color="light" (click)="Close()">Đóng</ion-button> -->
+      <ion-title>ĐĂNG NHẬP</ion-title>
+    </ion-toolbar>
+</ion-header>  
+<ion-content padding>
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input ngModel type="email" name="email"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Mật khẩu</ion-label>
+      <ion-input ngModel type="password" name="password"></ion-input>
+    </ion-item>
+  
+    <p text-right>Quên mật khẩu?</p>
+  
+    <ion-button type="submit" expand="full" color="primary">Đăng nhập</ion-button>
+  </form>
+  <p text-center>Bạn cần tạo tài khoản?</p>
+  <ion-button expand="full" color="danger" (click)="register()">Đăng ký</ion-button>
+</ion-content>
+
